@@ -1,0 +1,31 @@
+.nav-header .nav {
+  border-radius: 12px;
+  background: #f7bdcc;
+  padding: 14px 30px;
+  display: flex;
+  align-items: center;
+  gap: 92px;
+}
+
+.nav-header .nav .menu-list {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.nav-header .nav .menu-list li {
+  list-style: none;
+}
+
+.nav-header .nav .menu-list li a {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+.btn-connect-wallet.active {
+  height: 32px;
+  justify-content: flex-start;
+  padding: 0 10px;
+  pointer-events: none;
+}

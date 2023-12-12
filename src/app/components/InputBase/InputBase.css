@@ -1,0 +1,115 @@
+.c-label span {
+  color: #252525;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.c-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.c-control {
+  position: relative;
+}
+.c-control input {
+  padding: 9px 5px 9px 20px;
+  border: none;
+  opacity: 0.5;
+  vertical-align: baseline;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+  color: #111;
+  border-radius: 32px;
+  background: #f2f5fa;
+}
+.c-control input::-ms-input-placeholder,
+.c-control input::placeholder {
+  /* Edge 12-18 */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: #808080;
+}
+.c-control input:active,
+.c-control input:focus,
+.c-control input:hover {
+  border-color: #111;
+  outline-color: #111;
+  outline: unset;
+}
+.c-action {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: auto;
+  bottom: 50%;
+  right: 24px;
+  transform: translate(0, 50%);
+}
+.c-action button {
+  border: none;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  color: #a0a3bd;
+  cursor: pointer;
+}
+.c-action button,
+.c-action svg {
+  position: absolute;
+  top: auto;
+  bottom: 50%;
+  left: auto;
+  right: 50%;
+  transform: translate(50%, 50%);
+}
+.success .c-control input {
+  border-color: #00ba88;
+  background-color: #f3fdfa;
+}
+.success .c-control input:active,
+.success .c-control input:focus,
+.success .c-control input:hover {
+  border-color: #00ba88;
+  background-color: #f3fdfa;
+  outline: unset;
+}
+.success .c-action button {
+  color: #00ba88;
+}
+.error .c-control input {
+  border-color: #ed2e7e;
+  background-color: #fff2f7;
+}
+.error .c-control input:active,
+.error .c-control input:focus,
+.error .c-control input:hover {
+  border-color: #ed2e7e;
+  background-color: #fff2f7;
+  outline: unset;
+}
+.error .c-action button {
+  color: #ed2e7e;
+}
+.msg-error,
+.msg-success {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  margin: 8px 0 0;
+}
+.msg-error {
+  color: #c30052;
+}
+.msg-success {
+  color: #00966d;
+}
