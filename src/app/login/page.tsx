@@ -1,15 +1,14 @@
 "use client";
 
 import { signIn, useSession } from "next-auth/react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
-import React from "react";
 import Button from "../components/Button/Button";
 import InputBase from "../components/InputBase/InputBase";
 import "./Login.css";
-import Image from "next/image";
 
 const LoginPage = () => {
-  const { data, status } = useSession();
+  const { status } = useSession();
   const router = useRouter();
 
   if (status === "loading") {
@@ -17,6 +16,11 @@ const LoginPage = () => {
   }
 
   if (status === "authenticated") {
+    router.push("/");
+  }
+
+  const handleLaunchApp = (e: React.MouseEvent<Element, MouseEvent>) => {
+    e.preventDefault()
     router.push("/");
   }
 
@@ -63,7 +67,7 @@ const LoginPage = () => {
           Log in
         </Button>
         <Button
-          onClick={(e) => signIn("google")}
+          onClick={(e) => handleLaunchApp(e)}
           size="large"
           className="btn-launch-app"
         >

@@ -27,7 +27,7 @@ export const getDataAptosWallet = async () => {
   const isPetraInstalled = 'aptos' in customWindow;
 
   if (!isPetraInstalled) {
-    console.log('Petra is not installed');
+    alert("Petra is not installed");
     return null;
   }
 
@@ -37,6 +37,7 @@ export const getDataAptosWallet = async () => {
     const account = await wallet.account();
     return { response, account };
   } catch (error) {
-    throw new Error(error);
+    throw new Error('User rejected the request.');
   }
 };
+

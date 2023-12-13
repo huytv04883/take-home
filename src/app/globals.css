@@ -19,12 +19,9 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 a {
@@ -45,41 +42,43 @@ a {
 
 .content {
   height: 100%;
-  background: linear-gradient(
-        to bottom right,
-        #8f4791 0%,
-        #d9659c 18%,
-        #f7a050 38%,
-        #faa051 44%,
-        #cf642d 50%
-      )
-      bottom right / 50% 50% no-repeat,
-    linear-gradient(
-        to bottom left,
-        #8f4791 0%,
-        #d9659c 18%,
-        #f7a050 38%,
-        #faa051 44%,
-        #cf642d 50%
-      )
-      bottom left / 50% 50% no-repeat,
-    linear-gradient(
-        to top left,
-        #8f4791 0%,
-        #d9659c 18%,
-        #f7a050 38%,
-        #faa051 44%,
-        #cf642d 50%
-      )
-      top left / 50% 50% no-repeat,
-    linear-gradient(
-        to top right,
-        #8f4791 0%,
-        #d9659c 18%,
-        #f7a050 38%,
-        #faa051 44%,
-        #cf642d 50%
-      )
-      top right / 50% 50% no-repeat;
+  background: linear-gradient(to bottom right,
+      #8f4791 0%,
+      #d9659c 18%,
+      #f7a050 38%,
+      #faa051 44%,
+      #cf642d 50%) bottom right / 50% 50% no-repeat,
+    linear-gradient(to bottom left,
+      #8f4791 0%,
+      #d9659c 18%,
+      #f7a050 38%,
+      #faa051 44%,
+      #cf642d 50%) bottom left / 50% 50% no-repeat,
+    linear-gradient(to top left,
+      #8f4791 0%,
+      #d9659c 18%,
+      #f7a050 38%,
+      #faa051 44%,
+      #cf642d 50%) top left / 50% 50% no-repeat,
+    linear-gradient(to top right,
+      #8f4791 0%,
+      #d9659c 18%,
+      #f7a050 38%,
+      #faa051 44%,
+      #cf642d 50%) top right / 50% 50% no-repeat;
   background-size: cover;
+}
+
+.main-content {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.user-data {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
